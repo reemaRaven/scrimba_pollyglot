@@ -1,0 +1,174 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navy: #0D1B2A;
+  --teal: #0E4D64;
+  --blue: #1A6CF2;
+  --blue-hover: #1558cc;
+  --text-primary: #1a1a2e;
+  --text-muted: #555;
+  --border: #d0d5dd;
+  --bg-page: #e8e0f0;
+  --white: #ffffff;
+  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-page);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Header ── */
+header {
+  width: 100%;
+  background-color: var(--navy);
+  background-image: url('assets/world-map.png');
+  background-size: cover;
+  background-position: center;
+  padding: 24px 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.logo-text h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #a8d44f;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.logo-text p {
+  font-size: 0.85rem;
+  color: #ffffff;
+  margin-top: 4px;
+  letter-spacing: 0.3px;
+}
+
+/* ── Card ── */
+main {
+  width: 100%;
+  max-width: 420px;
+  padding: 32px 16px 48px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ── Field labels ── */
+.field-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--blue);
+  display: block;
+}
+
+/* ── Textarea ── */
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  resize: none;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+textarea:focus {
+  border-color: var(--blue);
+}
+
+/* ── Radio buttons ── */
+.language-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 4px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+  accent-color: var(--blue);
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+}
+
+/* ── Button ── */
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 4px;
+}
+
+.btn-primary:hover {
+  background-color: var(--blue-hover);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Result text display ── */
+.text-display {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  min-height: 56px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}

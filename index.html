@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PollyGlot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <img src="assets/parrot.png" alt="PollyGlot parrot mascot" class="logo-img" />
+      <div class="logo-text">
+        <h1>PollyGlot</h1>
+        <p>Perfect Translation Every Time</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Input View -->
+    <section id="input-view" class="card">
+      <label class="field-label">Text to translate 👇</label>
+      <textarea id="source-text" placeholder="How are you?" rows="4"></textarea>
+
+      <label class="field-label">Select language 👇</label>
+      <div class="language-options">
+        <label class="radio-label">
+          <input type="radio" name="language" value="French" checked />
+          French 🇫🇷
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="language" value="Spanish" />
+          Spanish 🇪🇸
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="language" value="Japanese" />
+          Japanese 🇯🇵
+        </label>
+      </div>
+
+      <button id="translate-btn" class="btn-primary">Translate</button>
+    </section>
+
+    <!-- Result View (hidden by default) -->
+    <section id="result-view" class="card hidden">
+      <label class="field-label">Original text 👇</label>
+      <div id="original-text" class="text-display"></div>
+
+      <label class="field-label">Your translation 👇</label>
+      <div id="translated-text" class="text-display"></div>
+
+      <button id="start-over-btn" class="btn-primary">Start Over</button>
+    </section>
+
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
