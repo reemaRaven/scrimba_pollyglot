@@ -13,26 +13,29 @@ A Scrimba AI Engineer Path project — an AI-powered translation app built with 
 ## Project Structure
 
 ```
-index.html        # App markup — input view and result view
-style.css         # Styles (navy header, card layout, blue accents)
-index.js          # View switching and API logic
-assets/           # Logo and background images
-.env.example      # Environment variable template
+index.html           # App markup — input view and result view
+style.css            # Styles (navy header, card layout, blue accents)
+index.js             # View switching and OpenAI API logic
+config.js            # Your API key (gitignored — never committed)
+config.example.js    # Template for config.js
+assets/              # Logo and background images
 ```
 
 ## Setup
 
 1. Clone the repo
-2. Copy `.env.example` to `.env` and add your OpenAI API key:
-   ```
-   OPENAI_API_KEY=your_openai_api_key_here
+2. Copy `config.example.js` to `config.js` and add your OpenAI API key:
+   ```js
+   const OPENAI_API_KEY = 'sk-...'
    ```
 3. Open `index.html` in a browser
+
+> `config.js` is gitignored — your API key will never be committed.
 
 ## Roadmap
 
 - [x] Base UI — input view, result view, design
-- [ ] OpenAI API integration
+- [x] OpenAI API integration (gpt-4o-mini, temperature 0.3, max_tokens 500)
 - [ ] Error handling
 - [ ] Chat mode (stretch goal)
 - [ ] Correction feature (stretch goal)
